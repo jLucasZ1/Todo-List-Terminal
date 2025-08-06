@@ -30,10 +30,20 @@ namespace TodoList
 
                 else if (result == "2")
                 {
-                    Console.WriteLine("Listando todas as tarefas...");
-                    foreach (var task in tasks)
+                    if (tasks.Count == 0)
                     {
-                        Console.WriteLine("- " + task);
+                        Console.WriteLine("Nenhuma tarefa encontrada. Adicione uma tarefa primeiro.");
+                        Console.WriteLine("Pressione qualquer tecla para voltar...");
+                        Console.ReadKey();
+                        Console.Clear();
+                    }
+                    else
+                    {
+                        Console.WriteLine("Listando todas as tarefas...");
+                        foreach (var task in tasks)
+                        {
+                            Console.WriteLine("- " + task);
+                        }
                     }
                 }
 
@@ -47,7 +57,7 @@ namespace TodoList
                     Console.WriteLine("Opção inválida, tente novamente.");
                 }
 
-                Console.WriteLine("Precione qualquer tecla para voltar..."); // comand for user to back to menu
+                Console.WriteLine("Precione qualquer tecla para voltar..."); // comand for user to back to
                 Console.ReadKey();
                 Console.Clear();
             }
