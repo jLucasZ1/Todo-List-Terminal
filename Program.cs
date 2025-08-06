@@ -1,4 +1,4 @@
-﻿namespace TodoList
+namespace TodoList
 {
     class Todo
     {
@@ -47,6 +47,9 @@
                     Console.WriteLine("Opção inválida, tente novamente.");
                 }
 
+                Console.WriteLine("Precione qualquer tecla para voltar..."); // comand for user to back to menu
+                Console.ReadKey();
+                Console.Clear();
             }
         }
 
